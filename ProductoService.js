@@ -3,7 +3,7 @@ const getMongo = require("./mongodb.js")
 //******************* Conexiones *******************
 
 async function getConexiones() {
-    const nameDb = "FerreteriaNukak"
+    const nameDb = "cnct"
     const client = await getMongo.getClientExport(nameDb)
     const collection = await getMongo.getCollectionExport(client, nameDb)
     return { collection, client }
